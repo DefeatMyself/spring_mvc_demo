@@ -29,7 +29,7 @@ public class LoginByPasswordService implements IBaseService {
         LoginByPasswordResponse response = new LoginByPasswordResponse();
         if (StringUtils.isEmpty(loginByPasswordRequest.getUserName())
                 && StringUtils.isEmpty(loginByPasswordRequest.getPassword())){
-            return new DefaultBaseResponse().response(0,"userName or password is empty!");
+            return new DefaultBaseResponse().response(0,"userName or password is empty!!");
         }
         Admin admin = new Admin();
         admin.setName(loginByPasswordRequest.getUserName());
