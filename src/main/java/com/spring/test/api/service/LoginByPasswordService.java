@@ -1,6 +1,8 @@
 package com.spring.test.api.service;
 
+import com.alan.dubbo.api.admin.service.IAdminService;
 import com.alibaba.druid.util.StringUtils;
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.spring.test.api.dao.AdminDao;
 import com.spring.test.api.entity.Admin;
 import com.spring.test.api.request.IBaseRequest;
@@ -17,8 +19,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginByPasswordService implements IBaseService {
 
-    @Autowired
-    private AdminDao adminDao;
+//    @Autowired
+//    private AdminDao adminDao;
+
+    @Reference(version = "0.1")
+    private IAdminService adminService;
 
     public IBaseRequest getRequest() {
         return new LoginByPasswordRequest();
@@ -33,7 +38,7 @@ public class LoginByPasswordService implements IBaseService {
         }
         Admin admin = new Admin();
         admin.setName(loginByPasswordRequest.getUserName());
-        response.setData(adminDao.queryAdmin(admin));
+        response.setData(adminService.queryAdmin(loginByPasswordRequest.getUserName()));
         return response.response(1,"login success !");
     }
 }
