@@ -19,11 +19,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginByPasswordService implements IBaseService {
 
-//    @Autowired
-//    private AdminDao adminDao;
+    @Autowired
+    private AdminDao adminDao;
 
-    @Reference(version = "0.1")
-    private IAdminService adminService;
+//    @Reference(version = "0.1")
+//    private IAdminService adminService;
 
     public IBaseRequest getRequest() {
         return new LoginByPasswordRequest();
@@ -38,7 +38,8 @@ public class LoginByPasswordService implements IBaseService {
         }
         Admin admin = new Admin();
         admin.setName(loginByPasswordRequest.getUserName());
-        response.setData(adminService.queryAdmin(loginByPasswordRequest.getUserName()));
+//        response.setData(adminService.queryAdmin(loginByPasswordRequest.getUserName()));
+        response.setData(adminDao.queryAdmin(admin));
         return response.response(1,"login success !");
     }
 }
