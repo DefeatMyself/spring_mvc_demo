@@ -127,11 +127,11 @@
       <version>5.1.34</version>
     </dependency>
 
-    <dependency>
+    <!--<dependency>
       <groupId>com.alan.dubbo</groupId>
       <artifactId>dubbo_api</artifactId>
       <version>1.0-SNAPSHOT</version>
-    </dependency>
+    </dependency>-->
 
   </dependencies>
 
