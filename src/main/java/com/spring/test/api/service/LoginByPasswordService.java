@@ -1,6 +1,5 @@
 package com.spring.test.api.service;
 
-import com.alan.dubbo.api.admin.service.IAdminService;
 import com.alibaba.druid.util.StringUtils;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.spring.test.api.dao.AdminDao;
