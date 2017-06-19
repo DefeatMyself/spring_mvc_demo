@@ -152,6 +152,24 @@
             <groupId>org.apache.tomcat.maven</groupId>
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.2</version>
+            <configuration>
+              <url>http://192.168.0.2:8089/manager/text</url>
+              <update>true</update>
+              <server>spring_mvc</server>
+              <username>root</username>
+              <password>root</password>
+              <path>/info</path>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+              <source>1.7</source>
+              <target>1.7</target>
+              <encoding>UTF-8</encoding>
+            </configuration>
           </plugin>
           <!-- jetty plugin -->
           <plugin>
@@ -161,7 +179,7 @@
             <configuration>
               <connectors>
                 <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                  <port>8080</port>
+                  <port>8090</port>
                 </connector>
               </connectors>
               <scanTargetPatterns>
