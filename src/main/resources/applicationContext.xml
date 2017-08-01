@@ -35,8 +35,8 @@
         
         <dubbo:annotation />
         
-        <!--<dubbo:reference interface="com.alan.dubbo.api.admin.service.IAdminService" id="adminService" version="0.1"/>
--->
+        <!--<dubbo:reference interface="com.alan.dubbo.api.admin.service.IAdminService" id="adminService" version="0.1"/>-->
+
         <context:component-scan base-package="com.spring.test.api.service,com.spring.test.api.dao">
                 <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
                 <context:include-filter type="annotation" expression="com.alibaba.dubbo.config.annotation.Service"/>
