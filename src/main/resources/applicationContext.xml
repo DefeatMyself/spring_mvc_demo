@@ -44,7 +44,7 @@
 
         <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 
-        <import resource="applicationContext-dataSource" />
+        <import resource="applicationContext-dataSource.xml" />
 
         <bean id="springBeanLocator" class="com.spring.test.api.SpringBeanLocator" scope="singleton"/>
 </beans>
