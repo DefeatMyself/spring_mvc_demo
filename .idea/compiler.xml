@@ -17,16 +17,16 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile default="false" name="Annotation profile for test_demo" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="spring_mvc_demo" />
+        <module name="test_demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring_mvc_demo" target="1.5" />
+      <module name="test_demo" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
